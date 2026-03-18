@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अधिकारी / अमलदार नियुक्त करा</title>
+<style>
+/* Reset */
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    display:flex;
+    justify-content:center;
+    background-image: url('https://thumbs.dreamstime.com/z/political-science-democracy-social-justice-concept-abstract-background-international-day-banner-image-politics-law-globe-392750400.jpg');
+    background-size: cover;            
+    background-repeat: no-repeat;      
+    background-position: center;
+    align-items:center;
+    min-height:100vh;
+}
+
+/* Container */
+.container {
+    background: #fff3e0;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    width: 350px;
+}
+
+/* Heading */
+.container h2 {
+    text-align:center;
+    color:#066d96;
+    margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+    display:block;
+    margin-top: 15px;
+    margin-bottom:5px;
+    font-weight:bold;
+    color:#131212;
+}
+
+/* Inputs */
+input, textarea, select {
+    width:100%;
+    padding:10px;
+    border:1px solid #e65100;
+    border-radius:8px;
+    font-size:14px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Submit Button */
+button {
+    width:100%;
+    padding:12px;
+    margin-top:20px;
+    background:#e65b11;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background:#bf360c;
+}
+
+/* Success message */
+#msg {
+    text-align:center;
+    margin-top:15px;
+    color:green;
+    font-weight:bold;
+    display:none;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>अधिकारी / अमलदार नियुक्त करा</h2>
+    <form id="assignForm">
+        <label for="pointName">पॉईंटचे नाव:</label>
+        <input type="text" id="pointName" placeholder="पॉईंटचे नाव भरा" required>
+
+        <label for="officerName">अधिकारी / अमलदार नाव:</label>
+        <input type="text" id="officerName" placeholder="नाव भरा" required>
+
+        <label for="designation">पद:</label>
+        <input type="text" id="designation" placeholder="पद भरा" required>
+
+        <label for="timeSlot">वेळ / टाईम स्लॉट:</label>
+        <input type="text" id="timeSlot" placeholder="उदा. 10:00 - 18:00" required>
+
+        <label for="notes">टीप / अतिरिक्त माहिती:</label>
+        <textarea id="notes" rows="2" placeholder="टीप भरा (optional)"></textarea>
+
+        <button type="submit">Submit</button>
+        <p id="msg">अधिकारी / अमलदार यशस्वीरित्या नियुक्त ✅</p>
+    </form>
+</div>
+
+<script>
+
+window.onload = function(){
+    alert("कृपया अधिकारी / अमलदार नियुक्त करा 👮");
+}
+
+// Admin button (optional)
+const adminBtn = document.getElementById("adminBtn");
+if(adminBtn){
+    adminBtn.addEventListener("click", function(){
+        alert("Admin Login Open होत आहे");
+    });
+}
+
+// Form submit handling (popup)
+const form = document.getElementById("assignForm");
+
+if(form){
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
+
+       
+        alert("अधिकारी / अमलदार यशस्वीरित्या नियुक्त झाले ✅");
+
+        form.reset();
+    });
+}
+</script>
+
+</body>
+</html>

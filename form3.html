@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>उपलब्ध अधिकारी / अमलदार यादी</title>
+<style>
+    
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSmAvEPuefa5ir_yIDzCAB0f0Bc6WlyrHXpQ&s');
+        background-repeat: no-repeat;      
+        background-position: center;       
+        align-items: center;
+        background-size: cover;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    .form-box {
+        background: #a8d181;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        width: 450px;
+    }
+
+    h2 {
+        text-align: center;
+        color: #0b3d91;
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        font-weight: bold;
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        margin-top: 20px;
+        background: #0b3d91;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #0841b3;
+    }
+
+    .msg {
+        text-align: center;
+        color: green;
+        font-weight: bold;
+        margin-top: 15px;
+        display: none;
+    }
+</style>
+</head>
+<body>
+
+<div class="form-box">
+    <h2>उपलब्ध अधिकारी / अमलदार यादी</h2>
+
+    <form id="officerForm">
+        <label for="name">अधिकारी / अमलदार नाव:</label>
+        <input type="text" id="name" name="name" placeholder="उदा. अमित पाटील" required>
+
+        <label for="designation">पद:</label>
+        <input type="text" id="designation" name="designation" placeholder="उदा. PSI / Constable" required>
+
+        <label for="availability">Availability:</label>
+        <select id="availability" name="availability" required>
+            <option value="">-- निवडा --</option>
+            <option value="Available">उपलब्ध</option>
+            <option value="Not Available">उपलब्ध नाही</option>
+        </select>
+
+        <label for="remarks">टिपण / तपशील:</label>
+        <textarea id="remarks" name="remarks" rows="4" placeholder="तुमचे remarks येथे लिहा"></textarea>
+
+        <button type="submit">Submit</button>
+        <p class="msg" id="msg">Form Submitted Successfully ✅</p>
+    </form>
+</div>
+
+<script>
+
+window.onload = function(){
+    alert("कृपया उपलब्ध अधिकारी / अमलदार यांची माहिती भरा 👮");
+}
+
+// Admin button (optional)
+const adminBtn = document.getElementById("adminBtn");
+if(adminBtn){
+    adminBtn.addEventListener("click", function(){
+        alert("Admin Login Open होत आहे");
+    });
+}
+
+// Form submit handling (popup)
+const form = document.getElementById("officerForm");
+
+if(form){
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
+
+       
+        alert("अधिकारी / अमलदार माहिती यशस्वीरित्या Submit झाली ✅");
+
+        form.reset();
+    });
+}
+</script>
+
+</body>
+</html>

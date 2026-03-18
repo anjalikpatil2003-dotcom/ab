@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>बंदोबस्त ठिकाण Add करा</title>
+<style>
+/* Reset */
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+   
+    display:flex;
+    justify-content:center;
+    background-image: url('https://www.globalindian.com/wp-content/uploads/2022/04/BANNER-Politicians.jpg');
+    background-size: cover;            
+    background-repeat: no-repeat;      
+    background-position: center;
+    align-items:center;
+    min-height:100vh;
+}
+
+/* Container */
+.container {
+    background: #e0f7fa;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    width: 350px;
+}
+
+/* Heading */
+.container h2 {
+    text-align:center;
+    color:#00796b;
+    margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+    display:block;
+    margin-top: 15px;
+    margin-bottom:5px;
+    font-weight:bold;
+    color:#004d40;
+}
+
+/* Inputs */
+input, textarea, select {
+    width:100%;
+    padding:10px;
+    border:1px solid #00796b;
+    border-radius:8px;
+    font-size:14px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Submit Button */
+button {
+    width:100%;
+    padding:12px;
+    margin-top:20px;
+    background:#00796b;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background:#004d40;
+}
+
+/* Success message */
+#msg {
+    text-align:center;
+    margin-top:15px;
+    color:green;
+    font-weight:bold;
+    display:none;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>बंदोबस्त ठिकाण Add करा</h2>
+    <form id="placeForm">
+        <label for="placeName">ठिकाणाचे नाव:</label>
+        <input type="text" id="placeName" placeholder="ठिकाणाचे नाव भरा" required>
+
+        <label for="address">पत्ता:</label>
+        <textarea id="address" rows="3" placeholder="पत्ता भरा" required></textarea>
+
+        <label for="policeStation">पोलीस स्टेशन:</label>
+        <input type="text" id="policeStation" placeholder="संबंधित पोलीस स्टेशन" required>
+
+        <label for="notes">टीप / अतिरिक्त माहिती:</label>
+        <textarea id="notes" rows="2" placeholder="टीप भरा (optional)"></textarea>
+
+        <button type="submit">Submit</button>
+        <p id="msg">ठिकाण यशस्वीरित्या Add झाले ✅</p>
+    </form>
+</div>
+
+<script>
+
+window.onload = function(){
+    alert("बंदोबस्त ठिकाण Add करण्यासाठी फॉर्म सुरु झाला आहे 📍");
+}
+
+// Admin button (optional)
+const adminBtn = document.getElementById("adminBtn");
+if(adminBtn){
+    adminBtn.addEventListener("click", function(){
+        alert("Admin Login Open होत आहे");
+    });
+}
+
+// Form submit handling (popup)
+const form = document.getElementById("placeForm");
+
+if(form){
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
+
+      
+        alert("बंदोबस्त ठिकाण यशस्वीरित्या Add झाले ✅");
+
+        form.reset();
+    });
+}
+</script>
+
+</body>
+</html>

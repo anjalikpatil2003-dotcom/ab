@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ड्युटी पास / ओळखपत्र</title>
+<style>
+/* Reset */
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    display:flex;
+    justify-content:center;
+    background-image: url('https://i.pinimg.com/236x/a7/a5/b4/a7a5b41fcd2365d3f5634eae29262236.jpg');
+    background-size: cover;            
+    background-repeat: no-repeat;      
+    background-position: center;
+    align-items:center;
+    min-height:100vh;
+}
+
+/* Container */
+.container {
+    background: #e0f7fa;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    width: 350px;
+}
+
+/* Heading */
+.container h2 {
+    text-align:center;
+    color:#006064;
+    margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+    display:block;
+    margin-top: 15px;
+    margin-bottom:5px;
+    font-weight:bold;
+    color:#004d40;
+}
+
+/* Inputs */
+input, textarea, select {
+    width:100%;
+    padding:10px;
+    border:1px solid #004d40;
+    border-radius:8px;
+    font-size:14px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Submit Button */
+button {
+    width:100%;
+    padding:12px;
+    margin-top:20px;
+    background:#006064;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background:#004d40;
+}
+
+/* Success message */
+#msg {
+    text-align:center;
+    margin-top:15px;
+    color:green;
+    font-weight:bold;
+    display:none;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>ड्युटी पास / ओळखपत्र</h2>
+    <form id="idCardForm">
+        <label for="name">अधिकारी / अंमलदार नाव:</label>
+        <input type="text" id="name" placeholder="नाव भरा" required>
+
+        <label for="designation">पद:</label>
+        <input type="text" id="designation" placeholder="पद भरा" required>
+
+        <label for="department">विभाग:</label>
+        <input type="text" id="department" placeholder="विभाग भरा" required>
+
+        <label for="idNumber">पास / ID नंबर:</label>
+        <input type="text" id="idNumber" placeholder="ID नंबर भरा" required>
+
+        <label for="validity">वैधता कालावधी:</label>
+        <input type="text" id="validity" placeholder="उदा. 01/01/2024 - 31/12/2024" required>
+
+        <label for="photo">फोटो अपलोड करा:</label>
+        <input type="file" id="photo" accept="image/*">
+
+        <label for="notes">टीप / अतिरिक्त माहिती:</label>
+        <textarea id="notes" rows="2" placeholder="टीप भरा (optional)"></textarea>
+
+        <button type="submit">Submit</button>
+        <p id="msg">ड्युटी पास / ओळखपत्र यशस्वीरित्या तयार ✅</p>
+    </form>
+</div>
+
+<script>
+
+window.onload = function(){
+    alert("ड्युटी पास / ओळखपत्र तयार करण्यासाठी फॉर्म सुरु झाला आहे 💳");
+}
+
+// Admin button (optional)
+const adminBtn = document.getElementById("adminBtn");
+if(adminBtn){
+    adminBtn.addEventListener("click", function(){
+        alert("Admin Login Open होत आहे");
+    });
+}
+
+// Form submit handling (popup)
+const form = document.getElementById("idCardForm");
+
+if(form){
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
+
+       
+        alert("ड्युटी पास / ओळखपत्र यशस्वीरित्या तयार झाले ✅");
+
+        form.reset();
+    });
+}
+</script>
+
+</body>
+</html>

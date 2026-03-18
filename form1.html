@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>बंदोबस्त फाईल फॉर्म</title>
+
+<style>
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+
+    background-image:url('bandobast.jpg');
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    background-image: url('bandobast.jpg');
+    background-size: cover;            
+    background-repeat: no-repeat;      
+    background-position: center;
+    min-height:100vh;
+    padding-top:30px;
+}
+
+/* Container box */
+.form-box{
+    background:rgb(226, 209, 205);
+    padding:30px;
+    border-radius:15px;
+    width:400px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+h2{
+    text-align:center;
+    color:#0b3d91;
+    margin-bottom:20px;
+}
+
+/* Labels and Inputs */
+label{
+    display:block;
+    font-weight:bold;
+    margin-top:15px;
+    margin-bottom:5px;
+}
+
+input, select, textarea{
+    width:100%;
+    padding:10px;
+    font-size:14px;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+textarea{
+    resize:none;
+}
+
+/* Submit button */
+.submit-btn{
+    width:100%;
+    padding:12px;
+    background:#0b3d91;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    margin-top:20px;
+    transition:0.3s;
+}
+
+.submit-btn:hover{
+    background:#084ec1;
+}
+
+/* Optional info section */
+.note{
+    margin-top:15px;
+    font-size:13px;
+    color:#444;
+}
+</style>
+</head>
+<body>
+
+<div class="form-box">
+<h2>बंदोबस्त फाईल फॉर्म</h2>
+
+<form id="bandobastForm">
+
+<label>फाईल क्रमांक / नाव:</label>
+<input type="text" placeholder="फाईल नाव / क्रमांक" required>
+
+<label>तारीख:</label>
+<input type="date" required>
+
+<label>कार्यक्रमाचे नाव / ठिकाण:</label>
+<input type="text" placeholder="कार्यक्रमाचे नाव / ठिकाण" required>
+
+<label>उपलब्ध अधिकारी / अंमलदार यादी:</label>
+<textarea placeholder="नावे, पद व संपर्क" rows="3" required></textarea>
+
+<label>संपर्क क्रमांक:</label>
+<input type="text" placeholder="मोबाईल / रेडिओ नंबर" required>
+
+<label>वाहने / उपकरणे:</label>
+<textarea placeholder="उपलब्ध वाहने / उपकरणे" rows="2"></textarea>
+
+<label>कार्यक्रमाचे वेळापत्रक / सूचना:</label>
+<textarea placeholder="कार्यक्रमाचे वेळापत्रक व सुरक्षा सूचना" rows="3"></textarea>
+
+<button type="submit" class="submit-btn">Submit</button>
+
+<p class="note"></p>
+</form>
+</div>
+
+
+
+<script>
+window.onload = function(){
+    alert("बंदोबस्त फाईल वेबसाइट मध्ये स्वागत आहे");
+}
+
+const form = document.getElementById("bandobastForm");
+const msg = document.getElementById("msg");
+
+form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let fileName = form.querySelector("input[type=text]").value;
+
+   
+    alert("फॉर्म Submit झाला ✅");
+
+
+    msg.innerText = "बंदोबस्त फाईल \"" + fileName + "\" यशस्वीरित्या submit झाली ✅";
+    msg.style.color = "green";
+
+    form.reset();
+});
+
+</script>
+
+</body>
+</html>

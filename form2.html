@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>बंदोबस्त संख्यात्मक माहिती</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        background-image: url('https://media.licdn.com/dms/image/v2/D4D12AQHNq1AbDx6j-Q/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1684348921701?e=2147483647&v=beta&t=vkwbpwoyP8QTI2bA1ABgvtFiQEG39PPR5tTGyFeu2Gw');
+        background-size: cover;            
+        background-repeat: no-repeat;      
+        background-position: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    .form-box {
+        background: #c3d0e0;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        width: 400px;
+    }
+
+    h2 {
+        text-align: center;
+        color: #0b3d91;
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        font-weight: bold;
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        margin-top: 20px;
+        background: #0b3d91;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #0841b3;
+    }
+
+    .msg {
+        text-align: center;
+        color: green;
+        font-weight: bold;
+        margin-top: 15px;
+        display: none;
+    }
+</style>
+</head>
+<body>
+
+<div class="form-box">
+    <h2>बंदोबस्त संख्यात्मक माहिती</h2>
+
+    <form id="bandobastForm">
+        <label for="source">कुठून उपलब्ध होणार:</label>
+        <input type="text" id="source" name="source" placeholder="उदा. पोलीस स्टेशन / शाखा" required>
+
+        <label for="quantity">उपलब्ध संख्या:</label>
+        <input type="number" id="quantity" name="quantity" placeholder="उदा. 10" required>
+
+        <label for="remarks">तपासणी / टिपण:</label>
+        <textarea id="remarks" name="remarks" rows="4" placeholder="तुमचे remarks येथे लिहा"></textarea>
+
+        <button type="submit">Submit</button>
+        <p class="msg" id="msg">Form Submitted Successfully ✅</p>
+    </form>
+</div>
+
+<script>
+
+window.onload = function(){
+    alert("बंदोबस्त संख्यात्मक माहिती येथे भरा 📊");
+}
+
+// Admin button (optional)
+const adminBtn = document.getElementById("adminBtn");
+if(adminBtn){
+    adminBtn.addEventListener("click", function(){
+        alert("Admin Login Open होत आहे");
+    });
+}
+
+// Form submit handling (popup)
+const form = document.getElementById("bandobastForm");
+
+if(form){
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
+
+        alert("संख्यात्मक माहिती यशस्वीरित्या Submit झाली ✅");
+
+        form.reset();
+    });
+}
+</script>
+
+</body>
+</html>

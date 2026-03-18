@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>व्हॉट्सअॅप Bulk Message</title>
+<style>
+/* Reset */
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    display:flex;
+    justify-content:center;
+    background-image: url('https://www.shutterstock.com/image-illustration/buenos-aires-argentina-july-07-260nw-2328130839.jpg');
+    background-size: cover;            
+    background-repeat: no-repeat;      
+    background-position: center;
+    align-items:center;
+    min-height:100vh;
+}
+
+/* Container */
+.container {
+    background: #e8f5e9;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    width: 350px;
+}
+
+/* Heading */
+.container h2 {
+    text-align:center;
+    color:#2e7d32;
+    margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+    display:block;
+    margin-top: 15px;
+    margin-bottom:5px;
+    font-weight:bold;
+    color:#1b5e20;
+}
+
+/* Inputs */
+input, textarea {
+    width:100%;
+    padding:10px;
+    border:1px solid #1b5e20;
+    border-radius:8px;
+    font-size:14px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Submit Button */
+button {
+    width:100%;
+    padding:12px;
+    margin-top:20px;
+    background:#2e7d32;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover {
+    background:#1b5e20;
+}
+
+/* Success message */
+#msg {
+    text-align:center;
+    margin-top:15px;
+    color:green;
+    font-weight:bold;
+    display:none;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>व्हॉट्सअॅप Bulk Message</h2>
+    <form id="whatsappForm">
+
+        <label for="numbers">नंबर (किंवा comma-separated list):</label>
+        <input type="text" id="numbers" placeholder="उदा. 9123456789, 9876543210" required>
+
+        <label for="message">संदेश:</label>
+        <textarea id="message" rows="4" placeholder="तुमचा संदेश इथे टाका" required></textarea>
+
+        <label for="notes">टीप / अतिरिक्त माहिती (optional):</label>
+        <textarea id="notes" rows="2" placeholder="टीप इथे टाका"></textarea>
+
+        <button type="submit">Send WhatsApp Message</button>
+        <p id="msg">संदेश यशस्वीरित्या तयार केले आहे ✅</p>
+    </form>
+</div>
+
+<script>
+
+window.onload = function(){
+    alert("कृपया व्हॉट्सअॅप Bulk Message साठी माहिती भरा 💬");
+}
+
+// Admin button (optional)
+const adminBtn = document.getElementById("adminBtn");
+if(adminBtn){
+    adminBtn.addEventListener("click", function(){
+        alert("Admin Login Open होत आहे");
+    });
+}
+
+// Form submit handling (popup)
+const form = document.getElementById("whatsappForm");
+
+if(form){
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
+
+        
+        alert("व्हॉट्सअॅप Bulk Message यशस्वीरित्या पाठवला गेला ✅");
+
+        form.reset();
+    });
+}
+</script>
+
+</body>
+</html>
